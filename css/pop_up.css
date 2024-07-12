@@ -1,0 +1,81 @@
+.pop_up-menu-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999999999;
+  background-color: #0000009d;
+  opacity: 0;
+  transition: .3s linear;
+  visibility: hidden;
+}
+
+.pop-menu-active {
+    opacity: 1;
+    transition: .3s linear;
+    visibility: inherit;
+}
+
+.pop_up-menu {
+  background-color: #fff;
+  padding: 20px 100px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.close-pop-menu svg{
+    fill: #fff;
+    width: 25px;
+    height: 25px;
+    top: -20%;
+    left: 95%;
+    position: absolute;
+}
+
+.salles-title {
+  font-size: 34px;
+  font-family: "Oswald", Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.salles-item-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.salles-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 5px 20px;
+}
+
+.salles-item img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 700px) {
+    .pop_up-menu {
+        padding: 20px 30px;
+    }
+    .salles-item-container {
+        flex-direction: column;
+        gap: 10px
+    }
+
+    .close-pop-menu svg {
+        left: 90%;
+    }
+}
